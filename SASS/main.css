@@ -1,8 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: white;
-  font-family: Arial, sans-serif;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   color: #333;
   margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .conteiner {
@@ -13,28 +27,24 @@ body {
   padding-right: 15px;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
 h1 {
   color: blue;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 div > li {
   color: blue;
 }
 
-button {
-  color: blue;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.header {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .logo {
@@ -43,7 +53,6 @@ button {
   text-decoration: none;
   color: black;
 }
-
 .logo-blue {
   color: #2196f3;
 }
@@ -56,76 +65,30 @@ nav ul {
   font-family: Inter;
 }
 
-.services {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.welcome {
-  text-align: center;
-}
-
-.service-boxes {
+.nav-list, .contact {
+  list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 90px;
-  margin-top: 40px;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
-
-.contact {
-  text-align: center;
+.nav-list a, .contact a {
+  text-decoration: none;
+  color: #212121;
+  font-weight: 500;
 }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  gap: 50px;
+.nav-list a:hover, .contact a:hover {
+  color: #2196f3;
 }
 
 .nav-list {
-  list-style: none;
-  display: flex;
   justify-content: space-between;
   gap: 30px;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
 }
 
 .contact {
-  list-style: none;
-  display: flex;
   justify-content: flex-end;
   gap: 30px;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
-.contact a {
-  text-decoration: none;
-  color: #212121;
-  font-weight: 500;
-}
-
-.contact a:hover {
-  color: #2196f3;
-}
-
-.nav-list a {
-  text-decoration: none;
-  color: #212121;
-  font-weight: 500;
-}
-
-.nav-list a:hover {
-  color: #2196f3;
 }
 
 .hero {
@@ -135,20 +98,12 @@ nav ul {
   margin: 50px 0;
   padding: 75px;
   border: 1px;
-  border-radius: 4px;
   background-image: url("../images/background1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #FFFFFF;
 }
-
-.text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .hero button {
   margin-top: 20px;
   background-color: #2196f3;
@@ -161,6 +116,28 @@ nav ul {
   cursor: pointer;
 }
 
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services {
+  text-align: center;
+  padding: 60px 20px;
+}
+.services .service-boxes {
+  display: flex;
+  gap: 20px;
+}
+
+.service-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-top: 40px;
+}
+
 .features-list {
   display: flex;
   justify-content: space-between;
@@ -168,14 +145,8 @@ nav ul {
   list-style: none;
   gap: 20px;
 }
-
 .features-list li {
   flex: 1 1 calc(25% - 20px);
-}
-
-.services .service-boxes {
-  display: flex;
-  gap: 20px;
 }
 
 .team-members {
@@ -197,8 +168,35 @@ img {
   width: 250px;
 }
 
+.client ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
+  min-height: 184px;
+}
+.client li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.client img {
+  max-width: 120px;
+  height: auto;
+}
+
 .footer {
   background-color: #2F303A;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .logo-text {
@@ -212,44 +210,8 @@ img {
   color: #2196f3;
 }
 
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .list-item {
   color: #FFFFFF;
-}
-
-.client ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 20px;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1170px;
-  min-height: 184px;
-}
-
-.client li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.client img {
-  max-width: 120px;
-  height: auto;
-}
-
-.mega {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .social {
@@ -272,7 +234,6 @@ img {
   bottom: 90px;
   right: 175px;
 }
-
 .network li a img {
   width: 44px;
   height: 44px;
@@ -281,7 +242,6 @@ img {
   padding: 8px;
   transition: transform 0.3s ease;
 }
-
 .network li a img:hover {
   transform: scale(1.3);
   background-color: #1d1d26;
@@ -293,46 +253,16 @@ img {
   gap: 20px;
 }
 
-.working {
+.working, .worker, .works {
   width: 250px;
   height: 50px;
   position: relative;
   top: -50px;
-  bottom: 0;
-  left: 1px;
-  right: 0;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   text-align: center;
   padding: 15px;
-}
-
-.worker {
-  width: 250px;
-  height: 50px;
-  position: relative;
-  top: -50px;
-  bottom: 0;
   left: 1px;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-.works {
-  width: 250px;
-  height: 50px;
-  position: relative;
-  top: -50px;
-  bottom: 0;
-  left: 1px;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  text-align: center;
-  padding: 15px;
 }
 
 .modal-overlay {
@@ -341,60 +271,48 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  justify-content: center;
-  align-items: center;
   animation: fadeIn 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-overlay.active .modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
 }
 
 .modal {
   background: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   width: 400px;
   max-width: 90%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   position: relative;
-  animation: scaleUp 0.3s ease;
+  transform: translateY(30px) scale(0.95);
+  opacity: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background: transparent;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
 .modal form {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
-.modal input,
-.modal textarea {
+.modal input, .modal textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
   width: 100%;
 }
-
 .modal textarea {
   resize: none;
   min-height: 60px;
 }
-
 .modal .submit-btn {
   background: #0077ff;
   color: white;
@@ -404,9 +322,18 @@ h2 {
   cursor: pointer;
   font-size: 16px;
 }
-
 .modal .submit-btn:hover {
   background: #005fd1;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 .telegram {
@@ -415,10 +342,8 @@ h2 {
   position: relative;
   bottom: 160px;
   left: 600px;
-  border-width: 1px;
   border-radius: 4px;
-  border: solid 1px;
-  border-color: rgba(255, 255, 255, 0.3019607843);
+  border: solid 1px rgba(255, 255, 255, 0.3019607843);
   background: #2F303A;
   color: #fff;
   outline: none;
@@ -448,73 +373,35 @@ h2 {
   bottom: 201px;
   left: 815px;
 }
-
 .form button:hover {
   background: #1976d2;
 }
 
-.label {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal {
-  background: white;
-  padding: 30px;
-  transform: translateY(30px) scale(0.95);
-  opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.modal-overlay.active .modal {
-  transform: translateY(0) scale(1);
-  opacity: 1;
-}
-
-.close-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: none;
-  border: none;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-.footer {
-  background-color: #2f303a;
-  padding: 60px 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .icon {
-  width: 40px;
-  height: 40px;
+  transition: filter 0.3s ease;
 }
-.icon path {
-  fill: #000;
-  transition: fill 0.3s ease;
+
+.client li {
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 250ms ease;
 }
-.icon:hover path {
-  fill: red;
+
+.client li svg rect,
+.client li svg path {
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client li:hover svg rect {
+  stroke: #2196f3;
+}
+
+.client li:hover svg path {
+  fill: #2196f3;
+}
+
+.client li:hover {
+  transform: translateY(-3px);
 }/*# sourceMappingURL=main.css.map */
