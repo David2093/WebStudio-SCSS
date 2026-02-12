@@ -1,0 +1,17 @@
+@mixin font($size, $weight, $line-height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin transition($property) {
+  transition: $property 250ms ease;
+}
+
+.title {
+  @include font(36px, 700, 1.2);
+}
+
+.button {
+  @include transition(background-color);
+}
